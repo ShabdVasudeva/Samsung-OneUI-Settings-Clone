@@ -16,4 +16,4 @@
 ![1000013312](https://github.com/ShabdVasudeva/Samsung-OneUI-Settings-Clone/assets/127197800/51528aa4-825f-4676-8aed-a94ea2be6645)
 
 ## Download:
-- 
+- https://www.pling.com/p/2121911/
