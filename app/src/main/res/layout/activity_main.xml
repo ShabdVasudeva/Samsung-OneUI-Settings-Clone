@@ -1,18 +1,843 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <dev.oneuiproject.oneui.layout.ToolbarLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        app:title="Settings"
+        app:expanded="false"
+        android:id="@+id/toolbar"
+        tools:context=".ui.activity.MainActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.core.widget.NestedScrollView
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:orientation="vertical">
+                <dev.oneuiproject.oneui.widget.RoundLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/oui_background_color"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="16dp">
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:id="@+id/connections"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_height="wrap_content"
+                            android:id="@+id/icon1"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="13dp"
+                            android:layout_width="wrap_content" />
+                        <LinearLayout
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="?textAppearanceListItem"
+                                android:textSize="16dp"
+                                android:textAlignment="viewStart"
+                                android:id="@+id/txt1" />
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                style="?android:attr/textAppearanceSmall"
+                                android:id="@+id/subtxt1" />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.2dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@android:color/darker_gray" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/connected_devices"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_height="wrap_content"
+                            android:id="@+id/icon2"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="13dp"
+                            android:layout_width="wrap_content" />
+                        <LinearLayout
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="?textAppearanceListItem"
+                                android:textSize="16dp"
+                                android:textAlignment="viewStart"
+                                android:id="@+id/txt2" />
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                style="?android:attr/textAppearanceSmall"
+                                android:id="@+id/subtxt2" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </dev.oneuiproject.oneui.widget.RoundLinearLayout>
+                <dev.oneuiproject.oneui.widget.Separator
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <dev.oneuiproject.oneui.widget.RoundLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/oui_background_color"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="16dp">
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:id="@+id/sounds"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_height="wrap_content"
+                            android:id="@+id/icon3"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="13dp"
+                            android:layout_width="wrap_content" />
+                        <LinearLayout
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="?textAppearanceListItem"
+                                android:textSize="16dp"
+                                android:textAlignment="viewStart"
+                                android:id="@+id/txt3" />
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                style="?android:attr/textAppearanceSmall"
+                                android:id="@+id/subtxt3" />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.2dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@android:color/darker_gray" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/notifications"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_height="wrap_content"
+                            android:id="@+id/icon4"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="13dp"
+                            android:layout_width="wrap_content" />
+                        <LinearLayout
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="?textAppearanceListItem"
+                                android:textSize="16dp"
+                                android:textAlignment="viewStart"
+                                android:id="@+id/txt4" />
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                style="?android:attr/textAppearanceSmall"
+                                android:id="@+id/subtxt4" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </dev.oneuiproject.oneui.widget.RoundLinearLayout>
+                <dev.oneuiproject.oneui.widget.Separator
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <dev.oneuiproject.oneui.widget.RoundLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/oui_background_color"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="16dp">
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:id="@+id/display"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_height="wrap_content"
+                            android:id="@+id/icon5"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="13dp"
+                            android:layout_width="wrap_content" />
+                        <LinearLayout
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="?textAppearanceListItem"
+                                android:textSize="16dp"
+                                android:textAlignment="viewStart"
+                                android:id="@+id/txt5" />
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                style="?android:attr/textAppearanceSmall"
+                                android:id="@+id/subtxt5" />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.2dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@android:color/darker_gray" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/battery"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_height="wrap_content"
+                            android:id="@+id/icon6"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="13dp"
+                            android:layout_width="wrap_content" />
+                        <LinearLayout
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="?textAppearanceListItem"
+                                android:textSize="16dp"
+                                android:textAlignment="viewStart"
+                                android:id="@+id/txt6" />
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                style="?android:attr/textAppearanceSmall"
+                                android:id="@+id/subtxt6" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </dev.oneuiproject.oneui.widget.RoundLinearLayout>
+                <dev.oneuiproject.oneui.widget.Separator
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <dev.oneuiproject.oneui.widget.RoundLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/oui_background_color"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="16dp">
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:id="@+id/walls_styles"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_height="28dp"
+                            android:id="@+id/icon7"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_width="28dp" />
+                        <LinearLayout
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="?textAppearanceListItem"
+                                android:textSize="16dp"
+                                android:textAlignment="viewStart"
+                                android:id="@+id/txt7" />
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                style="?android:attr/textAppearanceSmall"
+                                android:id="@+id/subtxt7" />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.2dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@android:color/darker_gray" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/home_screen"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_height="wrap_content"
+                            android:id="@+id/icon8"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="13dp"
+                            android:layout_width="wrap_content" />
+                        <LinearLayout
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="?textAppearanceListItem"
+                                android:textSize="16dp"
+                                android:textAlignment="viewStart"
+                                android:id="@+id/txt8" />
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                style="?android:attr/textAppearanceSmall"
+                                android:id="@+id/subtxt8" />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.2dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@android:color/darker_gray" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:id="@+id/security">
+                        <ImageView
+                            android:layout_height="wrap_content"
+                            android:id="@+id/icon9"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="13dp"
+                            android:layout_width="wrap_content" />
+                        <LinearLayout
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="?textAppearanceListItem"
+                                android:textSize="16dp"
+                                android:textAlignment="viewStart"
+                                android:id="@+id/txt9" />
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                style="?android:attr/textAppearanceSmall"
+                                android:id="@+id/subtxt9" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </dev.oneuiproject.oneui.widget.RoundLinearLayout>
+
+                <dev.oneuiproject.oneui.widget.Separator
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <dev.oneuiproject.oneui.widget.RoundLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/oui_background_color"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="16dp">
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:id="@+id/privacy"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_height="wrap_content"
+                            android:id="@+id/icon10"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="15dp"
+                            android:layout_width="wrap_content" />
+                        <LinearLayout
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="?textAppearanceListItem"
+                                android:textSize="16dp"
+                                android:textAlignment="viewStart"
+                                android:id="@+id/txt10" />
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                style="?android:attr/textAppearanceSmall"
+                                android:id="@+id/subtxt10" />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.2dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@android:color/darker_gray" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/location"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_height="wrap_content"
+                            android:id="@+id/icon11"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="13dp"
+                            android:layout_width="wrap_content" />
+                        <LinearLayout
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="?textAppearanceListItem"
+                                android:textSize="16dp"
+                                android:textAlignment="viewStart"
+                                android:id="@+id/txt11" />
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                style="?android:attr/textAppearanceSmall"
+                                android:id="@+id/subtxt11" />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.2dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@android:color/darker_gray" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/print"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_height="wrap_content"
+                            android:id="@+id/icon12"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="13dp"
+                            android:layout_width="wrap_content" />
+                        <LinearLayout
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="?textAppearanceListItem"
+                                android:textSize="16dp"
+                                android:textAlignment="viewStart"
+                                android:id="@+id/txt12" />
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                style="?android:attr/textAppearanceSmall"
+                                android:id="@+id/subtxt12" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </dev.oneuiproject.oneui.widget.RoundLinearLayout>
+                <dev.oneuiproject.oneui.widget.Separator
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <dev.oneuiproject.oneui.widget.RoundLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/oui_background_color"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="16dp">
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:id="@+id/accounts"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_height="wrap_content"
+                            android:id="@+id/icon13"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="13dp"
+                            android:layout_width="wrap_content" />
+                        <LinearLayout
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="?textAppearanceListItem"
+                                android:textSize="16dp"
+                                android:textAlignment="viewStart"
+                                android:id="@+id/txt13" />
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                style="?android:attr/textAppearanceSmall"
+                                android:id="@+id/subtxt13" />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.2dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@android:color/darker_gray" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/features"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_height="wrap_content"
+                            android:id="@+id/icon14"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="13dp"
+                            android:layout_width="wrap_content" />
+                        <LinearLayout
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="?textAppearanceListItem"
+                                android:textSize="16dp"
+                                android:textAlignment="viewStart"
+                                android:id="@+id/txt14" />
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                style="?android:attr/textAppearanceSmall"
+                                android:id="@+id/subtxt14" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </dev.oneuiproject.oneui.widget.RoundLinearLayout>
+                <dev.oneuiproject.oneui.widget.Separator
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <dev.oneuiproject.oneui.widget.RoundLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/oui_background_color"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="16dp">
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:id="@+id/wellbeing"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_height="wrap_content"
+                            android:id="@+id/icon15"
+                            android:tint="#ffffffff"
+                            android:padding="2dp"
+                            android:layout_marginLeft="4dp"
+                            android:background="@drawable/background"
+                            android:src="@drawable/ic_oui_digital_wellbeing"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="16dp"
+                            android:layout_width="wrap_content" />
+                        <LinearLayout
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="?textAppearanceListItem"
+                                android:textSize="16dp"
+                                android:text="Digital wellbeing"
+                                android:textAlignment="viewStart"
+                                android:id="@+id/txt15" />
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:text="Screen time • app timers"
+                                style="?android:attr/textAppearanceSmall"
+                                android:id="@+id/subtxt15" />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.2dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@android:color/darker_gray" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/care"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_height="wrap_content"
+                            android:id="@+id/icon16"
+                            android:tint="#ffffffff"
+                            android:padding="2dp"
+                            android:layout_marginLeft="4dp"
+                            android:background="@drawable/background2"
+                            android:src="@drawable/ic_oui_security_2"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="16dp"
+                            android:layout_width="wrap_content" />
+                        <LinearLayout
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="?textAppearanceListItem"
+                                android:textSize="16dp"
+                                android:textAlignment="viewStart"
+                                android:text="Device care"
+                                android:id="@+id/txt16" />
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:text="Storage • device • battery"
+                                style="?android:attr/textAppearanceSmall"
+                                android:id="@+id/subtxt16" />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.2dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@android:color/darker_gray" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/apps"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_height="wrap_content"
+                            android:id="@+id/icon17"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="13dp"
+                            android:layout_width="wrap_content" />
+                        <LinearLayout
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="?textAppearanceListItem"
+                                android:textSize="16dp"
+                                android:textAlignment="viewStart"
+                                android:id="@+id/txt17" />
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                style="?android:attr/textAppearanceSmall"
+                                android:id="@+id/subtxt17" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </dev.oneuiproject.oneui.widget.RoundLinearLayout>
+                <dev.oneuiproject.oneui.widget.Separator
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <dev.oneuiproject.oneui.widget.RoundLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/oui_background_color"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="16dp">
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:id="@+id/management"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_height="wrap_content"
+                            android:id="@+id/icon18"
+                            android:tint="#ffffffff"
+                            android:padding="2dp"
+                            android:layout_marginLeft="4dp"
+                            android:background="@drawable/background3"
+                            android:src="@drawable/ic_oui_script"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="16dp"
+                            android:layout_width="wrap_content" />
+                        <LinearLayout
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="?textAppearanceListItem"
+                                android:textSize="16dp"
+                                android:text="General management"
+                                android:textAlignment="viewStart"
+                                android:id="@+id/txt18" />
+                            <TextView
+                                android:layout_width="250dp"
+                                android:text="Language and keyboard • date and time"
+                                android:layout_height="wrap_content"
+                                style="?android:attr/textAppearanceSmall"
+                                android:id="@+id/subtxt18" />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.2dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@android:color/darker_gray" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/accessibility"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_height="wrap_content"
+                            android:id="@+id/icon19"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="13dp"
+                            android:layout_width="wrap_content" />
+                        <LinearLayout
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="?textAppearanceListItem"
+                                android:textSize="16dp"
+                                android:textAlignment="viewStart"
+                                android:id="@+id/txt19" />
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                style="?android:attr/textAppearanceSmall"
+                                android:id="@+id/subtxt19" />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.2dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@android:color/darker_gray" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/about"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_height="wrap_content"
+                            android:id="@+id/icon20"
+                            android:tint="#ffffffff"
+                            android:padding="2dp"
+                            android:layout_marginLeft="4dp"
+                            android:background="@drawable/background3"
+                            android:src="@drawable/ic_oui_info"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="16dp"
+                            android:layout_width="wrap_content" />
+                        <LinearLayout
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="?textAppearanceListItem"
+                                android:textSize="16dp"
+                                android:text="About phone"
+                                android:textAlignment="viewStart"
+                                android:id="@+id/txt20" />
+                            <TextView
+                                android:layout_width="250dp"
+                                android:text="Status • legal information • Phone name"
+                                android:layout_height="wrap_content"
+                                style="?android:attr/textAppearanceSmall"
+                                android:id="@+id/subtxt20" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </dev.oneuiproject.oneui.widget.RoundLinearLayout>
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </dev.oneuiproject.oneui.layout.ToolbarLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
