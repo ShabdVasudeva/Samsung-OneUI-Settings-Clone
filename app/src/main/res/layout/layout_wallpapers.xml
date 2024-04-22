@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".Wallpapers">
+
+    <dev.oneuiproject.oneui.layout.ToolbarLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        app:title="Wallpapers"
+        app:expanded="true"
+        android:id="@+id/toolbar"
+        tools:context=".ui.activity.Wallpapers">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:orientation="vertical">
+                <dev.oneuiproject.oneui.widget.Separator
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="World Wide" />
+                <dev.oneuiproject.oneui.widget.RoundLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/oui_background_color"
+                    android:orientation="vertical"
+                    android:id="@+id/online"
+                    android:paddingHorizontal="24dp"
+                    android:paddingVertical="12dp">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/link"
+                        android:hint="paste your wallpaper image link" />
+                    <Button
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:onClick="setWallpaper"
+                        android:layout_marginTop="10dp"
+                        android:text="set wallpaper" />
+                </dev.oneuiproject.oneui.widget.RoundLinearLayout>
+                <dev.oneuiproject.oneui.widget.Separator
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Gradients Lab" />
+                <dev.oneuiproject.oneui.widget.RoundLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/oui_background_color"
+                    android:orientation="vertical"
+                    android:id="@+id/graphical"
+                    android:paddingHorizontal="24dp"
+                    android:paddingVertical="12dp">
+                    <EditText
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:hint="Hex value of 1st color (#xxxxxx)"
+                        android:id="@+id/edit" />
+                    <EditText
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:hint="Hex value of 2nd color (#xxxxxx)"
+                        android:id="@+id/edit2" />
+                    <Button
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:id="@+id/setWall"
+                        android:layout_marginTop="10dp"
+                        android:text="Set Gradient As Wall" />
+                </dev.oneuiproject.oneui.widget.RoundLinearLayout>
+                <dev.oneuiproject.oneui.widget.Separator
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Gallery" />
+                <dev.oneuiproject.oneui.widget.RoundLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/oui_background_color"
+                    android:orientation="vertical"
+                    android:id="@+id/gallery"
+                    android:paddingHorizontal="24dp"
+                    android:paddingVertical="12dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="?textAppearanceListItem"
+                        android:gravity="center"
+                        android:textSize="16dp"
+                        android:textAlignment="viewStart"
+                        android:text="Choose from Gallery" />
+                </dev.oneuiproject.oneui.widget.RoundLinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </dev.oneuiproject.oneui.layout.ToolbarLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

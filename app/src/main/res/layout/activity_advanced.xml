@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".PermissiomActivity">
+
+    <dev.oneuiproject.oneui.layout.ToolbarLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        app:title="Advance Features"
+        app:expanded="false"
+        android:id="@+id/toolbar"
+        tools:context=".ui.activity.PermissionActivity">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:orientation="vertical">
+                <dev.oneuiproject.oneui.widget.Separator
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="Dark Mode" />
+                <androidx.appcompat.widget.SeslSwitchBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dark" />
+                <dev.oneuiproject.oneui.widget.RoundLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/oui_background_color"
+                    android:orientation="vertical">
+                    <FrameLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:id="@+id/settings_container" />
+                </dev.oneuiproject.oneui.widget.RoundLinearLayout>
+                <dev.oneuiproject.oneui.widget.RelatedCard
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="?textAppearanceListItem"
+                        android:gravity="center"
+                        android:id="@+id/styles"
+                        android:textSize="16dp"
+                        android:textAlignment="viewStart"
+                        android:text="Wallpapers And Styles" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="?textAppearanceListItem"
+                        android:id="@+id/backup"
+                        android:gravity="center"
+                        android:textSize="16dp"
+                        android:textAlignment="viewStart"
+                        android:text="Device backup" />
+                </dev.oneuiproject.oneui.widget.RelatedCard>
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </dev.oneuiproject.oneui.layout.ToolbarLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

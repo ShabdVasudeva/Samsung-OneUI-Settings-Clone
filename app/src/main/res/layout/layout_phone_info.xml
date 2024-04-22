@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".Wallpapers">
+
+    <dev.oneuiproject.oneui.layout.ToolbarLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        app:title="About Phone"
+        app:expanded="false"
+        android:id="@+id/toolbar"
+        tools:context=".ui.activity.Wallpapers">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:paddingVertical="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="200dp"
+                    android:gravity="top|center"
+                    android:textSize="30dp"
+                    style="?textAppearanceListItem"
+                    android:maxLines="2"
+                    android:id="@+id/device_name"
+                    android:layout_gravity="center"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="30dp">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        style="?android:attr/textAppearanceSmall"
+                        android:text="Carrier name" />
+
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="3.5dp">
+
+                        <ImageView
+                            android:layout_height="15dp"
+                            android:layout_width="15dp"
+                            android:src="@drawable/ic_oui_sim"
+                            android:layout_gravity="center" />
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            style="?android:attr/textAppearanceSmall"
+                            android:layout_gravity="center"
+                            android:id="@+id/sim" />
+
+                    </LinearLayout>
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="5dp"
+                        style="?android:attr/textAppearanceSmall"
+                        android:text="Device name" />
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        style="?android:attr/textAppearanceSmall"
+                        android:layout_marginTop="2dp"
+                        android:id="@+id/device" />
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="5dp"
+                        style="?android:attr/textAppearanceSmall"
+                        android:text="Device model" />
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        style="?android:attr/textAppearanceSmall"
+                        android:layout_marginTop="2dp"
+                        android:id="@+id/model" />
+                </LinearLayout>
+                <dev.oneuiproject.oneui.widget.RoundLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/oui_background_color"
+                    android:orientation="vertical">
+                    <FrameLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:id="@+id/settings_container" />
+                </dev.oneuiproject.oneui.widget.RoundLinearLayout>
+                <dev.oneuiproject.oneui.widget.RelatedCard
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="?textAppearanceListItem"
+                        android:gravity="center"
+                        android:id="@+id/update"
+                        android:textSize="16dp"
+                        android:textAlignment="viewStart"
+                        android:text="Software update" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="?textAppearanceListItem"
+                        android:id="@+id/backup"
+                        android:gravity="center"
+                        android:textSize="16dp"
+                        android:textAlignment="viewStart"
+                        android:text="Device backup" />
+                </dev.oneuiproject.oneui.widget.RelatedCard>
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </dev.oneuiproject.oneui.layout.ToolbarLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

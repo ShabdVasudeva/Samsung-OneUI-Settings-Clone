@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <dev.oneuiproject.oneui.layout.ToolbarLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        app:title="Wallpaper And Styles"
+        app:expanded="false"
+        android:id="@+id/toolbar"
+        tools:context=".ui.activity.WallpapersStyles">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="12dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="20dp"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="5dp">
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_gravity="center"
+                                android:text="select" />
+
+                            <ImageView
+                                android:id="@+id/lock_screen_preview"
+                                android:layout_width="wrap_content"
+                                android:layout_height="270dp"
+                                android:foreground="@drawable/preview_ripple"
+                                android:scaleType="centerCrop" />
+
+                            <TextView
+                                style="@style/PreviewBadge"
+                                android:layout_width="wrap_content"
+                                android:layout_height="16dp"
+                                android:layout_gravity="end|bottom|center"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:text="Lockscreen" />
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="12dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="20dp"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="5dp">
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_gravity="center"
+                                android:text="select" />
+
+                            <ImageView
+                                android:id="@+id/home_screen_preview"
+                                android:layout_width="wrap_content"
+                                android:layout_height="270dp"
+                                android:foreground="@drawable/preview_ripple"
+                                android:scaleType="centerCrop" />
+
+                            <TextView
+                                style="@style/PreviewBadge"
+                                android:layout_width="wrap_content"
+                                android:layout_height="16dp"
+                                android:layout_gravity="end|bottom|center"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:text="HomeScreen" />
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <dev.oneuiproject.oneui.widget.RoundLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/oui_background_color"
+                    android:orientation="vertical">
+                    <FrameLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:id="@+id/settings_container" />
+                </dev.oneuiproject.oneui.widget.RoundLinearLayout>
+                <dev.oneuiproject.oneui.widget.RelatedCard
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="?textAppearanceListItem"
+                        android:gravity="center"
+                        android:id="@+id/live_wallpaper"
+                        android:textSize="16dp"
+                        android:textAlignment="viewStart"
+                        android:text="live wallpaper" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="?textAppearanceListItem"
+                        android:id="@+id/phone_settings"
+                        android:gravity="center"
+                        android:textSize="16dp"
+                        android:textAlignment="viewStart"
+                        android:text="Home Up" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="?textAppearanceListItem"
+                        android:gravity="center"
+                        android:id="@+id/good_lock"
+                        android:textSize="16dp"
+                        android:textAlignment="viewStart"
+                        android:text="Display settings" />
+                </dev.oneuiproject.oneui.widget.RelatedCard>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </dev.oneuiproject.oneui.layout.ToolbarLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

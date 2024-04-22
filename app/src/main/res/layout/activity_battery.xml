@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".Wallpapers">
+
+    <dev.oneuiproject.oneui.layout.ToolbarLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        app:title="Battery"
+        app:expanded="false"
+        android:id="@+id/toolbar"
+        tools:context=".ui.activity.Wallpapers">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:paddingVertical="16dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="20dp">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="35dp"
+                        android:layout_marginRight="3dp"
+                        style="?textAppearanceListItem"
+                        android:id="@+id/advice"
+                        android:layout_gravity="bottom"
+                        android:text="55m" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:textSize="20dp"
+                        style="?textAppearanceListItem"
+                        android:layout_gravity="bottom"
+                        android:text="remaining" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="25dp"
+                    style="?android:attr/textAppearanceSmall"
+                    android:layout_marginTop="3dp"
+                    android:id="@+id/percentage" />
+
+                <com.google.android.material.progressindicator.LinearProgressIndicator
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    app:trackColor="#E5E5E5"
+                    app:trackCornerRadius="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"
+                    app:trackThickness="30dp"
+                    app:indeterminateAnimationType="disjoint"
+                    app:indicatorColor="#7FDD8F"
+                    android:id="@+id/progress" />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="250dp"
+                    android:layout_marginLeft="25dp"
+                    style="?android:attr/textAppearanceSmall"
+                    android:layout_marginTop="2dp"
+                    android:id="@+id/status" />
+
+                <dev.oneuiproject.oneui.widget.RoundLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/oui_background_color"
+                    android:orientation="vertical">
+                    <FrameLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:id="@+id/settings_container" />
+                </dev.oneuiproject.oneui.widget.RoundLinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </dev.oneuiproject.oneui.layout.ToolbarLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

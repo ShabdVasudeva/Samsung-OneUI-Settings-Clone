@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".PermissiomActivity">
+
+    <dev.oneuiproject.oneui.layout.ToolbarLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        app:title="Permissions Manager"
+        app:expanded="true"
+        android:id="@+id/toolbar"
+        tools:context=".ui.activity.PermissionActivity">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:orientation="vertical">
+                <dev.oneuiproject.oneui.widget.RoundLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/oui_background_color"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="16dp">
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:id="@+id/modify"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:layout_marginRight="13dp"
+                            android:src="@drawable/ic_oui_plug_in_manager" />
+                        <LinearLayout
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="?textAppearanceListItem"
+                                android:textSize="16dp"
+                                android:text="Modify system settings"
+                                android:textAlignment="viewStart" />
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:text="Manage permission for modify system settings"
+                                style="?android:attr/textAppearanceSmall" />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.2dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@android:color/darker_gray" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:id="@+id/usage"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:layout_marginRight="13dp"
+                            android:src="@drawable/ic_oui_manage_storage_outline" />
+                        <LinearLayout
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="?textAppearanceListItem"
+                                android:textSize="16dp"
+                                android:text="Usage Access"
+                                android:textAlignment="viewStart" />
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:text="Manage usage access permission"
+                                style="?android:attr/textAppearanceSmall" />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.2dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@android:color/darker_gray" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:id="@+id/files"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:layout_marginRight="13dp"
+                            android:src="@drawable/ic_oui_folder_outline" />
+                        <LinearLayout
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="?textAppearanceListItem"
+                                android:textSize="16dp"
+                                android:text="Files access"
+                                android:textAlignment="viewStart" />
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:text="Manage permission for files access"
+                                style="?android:attr/textAppearanceSmall" />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.2dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@android:color/darker_gray" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:id="@+id/unknown"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="13dp"
+                            android:layout_width="wrap_content"
+                            android:src="@drawable/ic_oui_apps_outline" />
+                        <LinearLayout
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="?textAppearanceListItem"
+                                android:textSize="16dp"
+                                android:text="Unknown sources"
+                                android:textAlignment="viewStart" />
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:text="Allow the app to install from 3rd party"
+                                style="?android:attr/textAppearanceSmall" />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.2dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@android:color/darker_gray" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:id="@+id/overlay"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="13dp"
+                            android:layout_width="wrap_content"
+                            android:src="@drawable/ic_oui_attach" />
+                        <LinearLayout
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="?textAppearanceListItem"
+                                android:textSize="16dp"
+                                android:text="Display over other apps"
+                                android:textAlignment="viewStart" />
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:text="Manage display over other apps permission"
+                                style="?android:attr/textAppearanceSmall" />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.2dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@android:color/darker_gray" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:id="@+id/notifications"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="13dp"
+                            android:layout_width="wrap_content"
+                            android:src="@drawable/ic_oui_notice_outline" />
+                        <LinearLayout
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="?textAppearanceListItem"
+                                android:textSize="16dp"
+                                android:text="Device and app notification"
+                                android:textAlignment="viewStart" />
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:text="Manage permission for notifications"
+                                style="?android:attr/textAppearanceSmall" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </dev.oneuiproject.oneui.widget.RoundLinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </dev.oneuiproject.oneui.layout.ToolbarLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
